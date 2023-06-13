@@ -108,8 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
                 ReadWriteUserDetails readWriteDetails=new ReadWriteUserDetails(fullName,phoneNumber);
 
                 //Extracting User Reference from Database-"Registered Users"
-                DatabaseReference referenceProfile= FirebaseDatabase.getInstance("https://dine-in-order-a76fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Registered Users");
-
+                DatabaseReference referenceProfile= FirebaseDatabase.getInstance().getReference("Registered Users");
 
                 assert firebaseUser != null;
                 referenceProfile.child(firebaseUser.getUid()).setValue(readWriteDetails).addOnCompleteListener(task1-> {
