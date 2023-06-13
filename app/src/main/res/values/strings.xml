@@ -42,5 +42,11 @@
     <string name="order_id">Order ID:</string>
     <string name="order_id_value">123456</string>
     <string name="login_logo">Login logo</string>
+<<<<<<< HEAD
+=======
+    <string name="Quantity_value_description">Two buttons for incrementing and decrementing the order quantity</string>
+    <string name="cash">Cash</string>
+    <string name="cashless">Cashless</string>
+>>>>>>> 2de2340 (Initial commit)
 
 </resources>
