@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "298841977383",
+    "project_id": "dine-in-order-a76fb",
+    "storage_bucket": "dine-in-order-a76fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298841977383:android:a7d961dc5d8bbae1db9402",
+        "android_client_info": {
+          "package_name": "com.dineInOrder.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298841977383-3k1dotbu0petstl3fi2ss362c1feebpe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dineInOrder.application",
+            "certificate_hash": "4a39f3877c81f0169db910e8df4d04e9927c5e4c"
+          }
+        },
+        {
+          "client_id": "298841977383-cpqr4c1h8anomt20mo26kv4ps1qd5uq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD81whCRElSll7b7E6ph3FTbfOYIl-04q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298841977383-cpqr4c1h8anomt20mo26kv4ps1qd5uq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

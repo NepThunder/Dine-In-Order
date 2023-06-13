@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Dine-In Order</string>
+    <string name="logo">logo</string>
+    <string name="first_come">First Come, First Serve</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="email1">Email :</string>
+    <string name="userEmail">shivamsingh18@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="newUser">New User?</string>
+    <string name="registerHere">Register Here</string>
+    <string name="register">Register</string>
+    <string name="name">Full Name</string>
+    <string name="name1">Name :</string>
+    <string name="userName">Shivam Singh</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="phoneNumber1">Phone No. :</string>
+    <string name="userPhoneNumber">6361880230</string>
+    <string name="alreadyAUser">Already a User?</string>
+    <string name="clickHere">Click Here</string>
+    <string name="orderNow">ORDER NOW</string>
+    <string name="useOtherMethods">Use Other Methods</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="food_name">Food Name</string>
+    <string name="sample_name">Sample Name</string>
+    <string name="cart">Cart</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="nameofitem">Name</string>
+    <string name="price">Price</string>
+    <string name="rupeeSymbol">₹</string>
+    <string name="quantity_button_description">Two buttons for incrementing and decrementing the order quantity</string>
+    <string name="add_button">add button</string>
+    <string name="quantity_value">1</string>
+    <string name="minus_button">minus button</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="phone">Phone</string>
+    <string name="value_50">50</string>
+    <string name="northern_meal">Northern Meal</string>
+    <string name="order_id">Order ID:</string>
+    <string name="order_id_value">123456</string>
+    <string name="login_logo">Login logo</string>
+
+</resources>

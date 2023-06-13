@@ -1,0 +1,25 @@
+package com.dineInOrder.application.Activities;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+
+import com.dineInOrder.application.R;
+
+
+public class SplashScreenActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash_screen);
+        new Handler().postDelayed((Runnable) () -> {
+            Intent intent=new Intent(SplashScreenActivity.this,LoginActivity.class);
+            startActivity(intent);
+            finish();
+        },3000);
+    }
+}
