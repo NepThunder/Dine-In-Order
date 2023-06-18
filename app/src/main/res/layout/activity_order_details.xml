@@ -170,6 +170,7 @@
 
 
                     <RadioGroup
+                        android:id="@+id/paymentMethod"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -180,13 +181,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="80dp"
-                            android:text="@string/cash" />
+                            android:text="@string/cash"
+                            android:onClick="checkButton"/>
 
                         <RadioButton
                             android:id="@+id/cashless"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/cashless" />
+                            android:text="@string/cashless"
+                            android:onClick="checkButton"/>
                     </RadioGroup>
 
                     <Button

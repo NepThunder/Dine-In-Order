@@ -1,5 +1,6 @@
 package com.dineInOrder.application.Activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.dineInOrder.application.Fragments.HomeFragment;
 import com.dineInOrder.application.Fragments.cartFragment;
+import com.dineInOrder.application.Fragments.profileFragment;
 import com.dineInOrder.application.R;
 import com.dineInOrder.application.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment;
     FrameLayout frameLayout;
     cartFragment cartfragment;
+    profileFragment profilefragment;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,19 +32,20 @@ public class MainActivity extends AppCompatActivity {
         frameLayout=findViewById(R.id.container);
         homeFragment=new HomeFragment();
         cartfragment=new cartFragment();
-//        profileFragment=new ProfileFragment();
+        profilefragment=new profileFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
         bottomNavigationView.setOnItemSelectedListener(item ->{
             switch (item.getItemId()){
                 case R.id.home:
+                    setTitle("Home");
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
                     return true;
                 case R.id.cart:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container,cartfragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container,cartfragment,"cart_Fragment").commit();
                     return true;
-//                case R.id.profile:
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
-//                    return true;
+                case R.id.profile:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container,profilefragment).commit();
+                    return true;
             }
             return false;
         } );

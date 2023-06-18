@@ -1,14 +1,17 @@
 package com.dineInOrder.application.Models;
 
-public class orderModel {
+public class cartModel {
     int orderImage;
     String orderName,price,orderId;
 
-    public orderModel(int orderImage, String orderName, String price, String orderId) {
+    public cartModel(int orderImage, String orderName, String price, String orderId) {
         this.orderImage = orderImage;
         this.orderName = orderName;
         this.price = price;
         this.orderId = orderId;
+    }
+
+    public cartModel() {
     }
 
     public int getOrderImage() {
@@ -39,7 +42,7 @@ public class orderModel {
         return orderId;
     }
 
-    public void setOrderId(String orderNumber) {
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 }

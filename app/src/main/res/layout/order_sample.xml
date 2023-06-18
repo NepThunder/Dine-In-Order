@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="130dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="120dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
@@ -57,17 +57,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/order_id"
-                        android:textColor="#FF535353"
+                        android:textColor="#000000"
 
                         />
 
                     <TextView
                         android:id="@+id/orderId"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="20dp"
                         android:layout_marginStart="5dp"
                         android:text="@string/order_id_value"
-                        android:textColor="#FF535353" />
+                        android:textColor="#000000" />
 
                 </LinearLayout>
 
@@ -81,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:padding="1dp"
                         android:text="@string/price"
-                        android:textColor="#535353" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/textView3"

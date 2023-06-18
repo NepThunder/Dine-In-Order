@@ -83,7 +83,6 @@ public class HomeFragment extends Fragment {
 
     private void dataInitialized() {
         list =new ArrayList<>();
-
         list.add(new MainModel(R.drawable.northern_meal,"Northern Meal","40","Northern Indian cuisine is characterized by the use of rich and creamy gravies, flatbread like naan and roti, and a variety of vegetarian dishes."));
         list.add(new MainModel(R.drawable.dosa,"Dosa","40","Dosa is a popular South Indian dish made from a fermented batter of rice and lentils, typically served with sambar and chutney."));
         list.add(new MainModel(R.drawable.idly,"Idly","30","Idly is a traditional South Indian breakfast dish made from fermented rice and lentil batter, typically served with sambar and coconut chutney."));
