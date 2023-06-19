@@ -45,5 +45,9 @@
     <string name="Quantity_value_description">Two buttons for incrementing and decrementing the order quantity</string>
     <string name="cash">Cash</string>
     <string name="cashless">Cashless</string>
+    <string name="upload_your_profile_picture">Upload Your Profile Picture</string>
+    <string name="choose_picture">Choose Picture</string>
+    <string name="selected_profile_picture">Selected Profile Picture</string>
+    <string name="upload_picture">Upload Picture</string>
 
 </resources>
