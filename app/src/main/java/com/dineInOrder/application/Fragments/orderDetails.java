@@ -1,5 +1,6 @@
 package com.dineInOrder.application.Fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -25,7 +26,6 @@ import java.util.Objects;
 
 public class orderDetails extends AppCompatActivity {
     ActivityOrderDetailsBinding binding;
-    private FirebaseAuth auth;
     ImageView imageView,addBtn,minusBtn;
     TextView foodName,itemPrice,desc,orderQuantity;
     EditText userName,userPhoneNumber;
@@ -33,6 +33,7 @@ public class orderDetails extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton radioButton;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,7 @@ public class orderDetails extends AppCompatActivity {
         final DBHelper helper = new DBHelper(this);
 
 
+        FirebaseAuth auth;
         if (getIntent().getIntExtra("type", 0) == 1) {
             auth = FirebaseAuth.getInstance();
             String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
@@ -130,7 +132,7 @@ public class orderDetails extends AppCompatActivity {
             final int image=cursor.getInt(4);
             final int unitPrice=cursor.getInt(3)/cursor.getInt(5);
             auth = FirebaseAuth.getInstance();
-            String userId = auth.getCurrentUser().getUid();
+            String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
             userName.setText(cursor.getString(1));
             userPhoneNumber.setText((cursor.getString(2)));
             itemPrice.setText(String.valueOf(cursor.getInt(3)));

@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dineInOrder.application.Models.Profile;
 import com.dineInOrder.application.R;
 import com.google.firebase.auth.FirebaseAuth;
 

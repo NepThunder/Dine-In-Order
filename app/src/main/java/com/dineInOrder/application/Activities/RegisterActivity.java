@@ -11,8 +11,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.dineInOrder.application.Models.Profile;
+
 import com.dineInOrder.application.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -42,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerConfirmPassword=findViewById(R.id.registerConfirmPassword);
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("RegisterActivity");
-        Toast.makeText(this, "RegisterActivity your Account", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Register your Account", Toast.LENGTH_SHORT).show();
         progressBar=findViewById(R.id.progressBar);
 
         registerBtn.setOnClickListener(view -> {
@@ -55,15 +57,15 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please Enter your Full Name", Toast.LENGTH_SHORT).show();
                 registerName.setError("Full Name is Required");
                 registerName.requestFocus();
-            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                Toast.makeText(this, "Please re-enter your email", Toast.LENGTH_SHORT).show();
-                registerEmail.setError("Valid Email Required");
-                registerEmail.requestFocus();
             } else if (TextUtils.isEmpty(phoneNumber)) {
                 Toast.makeText(this, "Please enter your phone Number", Toast.LENGTH_SHORT).show();
                 registerPhoneNumber.setError("Phone number required");
                 registerPhoneNumber.requestFocus();
-            } else if (phoneNumber.length()!=10) {
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Please re-enter your email", Toast.LENGTH_SHORT).show();
+                registerEmail.setError("Valid Email Required");
+                registerEmail.requestFocus();
+            }  else if (phoneNumber.length()!=10) {
                 Toast.makeText(this, "Please re-enter your phone Number", Toast.LENGTH_SHORT).show();
                 registerPhoneNumber.setError("Mobile Number should be 10 digits");
                 registerPhoneNumber.requestFocus();
@@ -121,7 +123,7 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show();
 
                         //open user after successful Registration
-                        Intent intent=new Intent(this, Profile.class);
+                        Intent intent=new Intent(this, LoginActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();

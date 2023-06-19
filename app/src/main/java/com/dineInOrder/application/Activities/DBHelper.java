@@ -27,7 +27,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String query="create table orders(id integer primary key autoincrement,name text,phone text,price int,image int,quantity int,description text,foodName text,userId text,payment text)";
+        String query="create table orders(id integer primary key autoincrement," +
+                "name text," +
+                "phone text," +
+                "price int," +
+                "image int," +
+                "quantity int," +
+                "description text," +
+                "foodName text," +
+                "userId text)";
         sqLiteDatabase.execSQL(query);
     }
 

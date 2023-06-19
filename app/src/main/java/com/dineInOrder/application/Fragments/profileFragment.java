@@ -39,7 +39,6 @@ public class profileFragment extends Fragment {
 
     DatabaseReference ref;
     FirebaseAuth auth = FirebaseAuth.getInstance();
-
     private static final String TAG="User Profile";
     TextView userName,userPhoneNumber,userEmail;
     Button logoutBtn;
@@ -50,8 +49,8 @@ public class profileFragment extends Fragment {
         if (getActivity() != null) {
             getActivity().setTitle("Profile");
         }
+        logoutBtn=view.findViewById(R.id.logoutbtn);
         if (auth.getCurrentUser() != null) {
-            logoutBtn=view.findViewById(R.id.logoutbtn);
             userName=view.findViewById(R.id.userName);
             userPhoneNumber=view.findViewById(R.id.userPhoneNumber);
             userEmail=view.findViewById(R.id.userEmail);
