@@ -61,15 +61,15 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please enter your phone Number", Toast.LENGTH_SHORT).show();
                 registerPhoneNumber.setError("Phone number required");
                 registerPhoneNumber.requestFocus();
+            } else if (phoneNumber.length()!=10) {
+                Toast.makeText(this, "Please re-enter your phone Number", Toast.LENGTH_SHORT).show();
+                registerPhoneNumber.setError("Mobile Number should be 10 digits");
+                registerPhoneNumber.requestFocus();
             } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 Toast.makeText(this, "Please re-enter your email", Toast.LENGTH_SHORT).show();
                 registerEmail.setError("Valid Email Required");
                 registerEmail.requestFocus();
-            }  else if (phoneNumber.length()!=10) {
-                Toast.makeText(this, "Please re-enter your phone Number", Toast.LENGTH_SHORT).show();
-                registerPhoneNumber.setError("Mobile Number should be 10 digits");
-                registerPhoneNumber.requestFocus();
-            } else if (TextUtils.isEmpty(password)) {
+            }   else if (TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "Please Enter your Password", Toast.LENGTH_SHORT).show();
                 registerPassword.setError("Password required");
                 registerPassword.requestFocus();
