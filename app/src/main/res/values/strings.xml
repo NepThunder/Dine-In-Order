@@ -49,5 +49,8 @@
     <string name="choose_picture">Choose Picture</string>
     <string name="selected_profile_picture">Selected Profile Picture</string>
     <string name="upload_picture">Upload Picture</string>
+    <string name="profilepic">profilePic</string>
+    <string name="log_out">Log out</string>
+    <string name="change_profile">Change Profile</string>
 
 </resources>

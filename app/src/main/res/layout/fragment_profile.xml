@@ -4,49 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Models.Profile"
+    tools:context=".Fragments.profileFragment"
     android:background="#CCEA8C00">
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/profilePic"
         android:layout_width="wrap_content"
-        android:layout_height="180dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="113dp"
-        android:adjustViewBounds="false"
-        android:contentDescription="profilePic"
+        android:layout_marginEnd="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/profilepic"
         app:srcCompat="@drawable/profilepic" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_changeProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/profilePic"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="122dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="120dp"
-        android:layout_below="@+id/imageView3"
-        android:text="Change Profile"
+        android:layout_marginEnd="119dp"
+        android:text="@string/change_profile"
         android:textAlignment="center"
         android:textColor="@color/blueVariant2"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tv_changeProfile"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="227dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:background="@drawable/roundedshape"
@@ -142,7 +140,7 @@
             android:textColor="@color/red"
             android:fontFamily="@font/stardos_stencil_bold"
             android:textAppearance="@style/name"
-            android:text="Log out" />
+            android:text="@string/log_out" />
 
 
     </LinearLayout>

@@ -15,9 +15,10 @@
             android:name=".Fragments.orderDetails"
             android:exported="false" />
         <activity
-            android:name=".Models.Profile"
+            android:name=".Activities.ChangeProfile"
             android:exported="true"
             android:screenOrientation="portrait" >
+
         </activity>
         <activity
             android:name=".Activities.LoginActivity"
@@ -38,6 +39,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Activities.MainActivity"

@@ -33,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
         homeFragment=new HomeFragment();
         cartfragment=new cartFragment();
         profilefragment=new profileFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+        String openFragment = getIntent().getStringExtra("openFragment");
+        if (openFragment != null && openFragment.equals("fragmentProfile")) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, profilefragment).commit();
+            bottomNavigationView.setSelectedItemId(R.id.profile); // Set the selected item in the bottom navigation view
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        }
         bottomNavigationView.setOnItemSelectedListener(item ->{
             switch (item.getItemId()){
                 case R.id.home:
