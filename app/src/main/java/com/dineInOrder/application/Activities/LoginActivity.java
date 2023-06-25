@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         authProfile=FirebaseAuth.getInstance();
         login=findViewById(R.id.loginbtn);
         registerHere=findViewById(R.id.registerHere);
+//        login.setVisibility(View.GONE);
         registerHere.setOnClickListener(view -> registerHere());
         login.setOnClickListener(view -> {
             String email=loginEmail.getText().toString();
